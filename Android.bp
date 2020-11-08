@@ -657,19 +657,6 @@ dex_import {
 	system_ext_specific: true,
 }
 
-dex_import {
-	name: "qti-telephony-hidl-wrapper",
-	owner: "xiaomi",
-	jars: ["proprietary/system_ext/framework/qti-telephony-hidl-wrapper.jar"],
-	system_ext_specific: true,
-}
-
-dex_import {
-	name: "qti-telephony-utils",
-	owner: "xiaomi",
-	jars: ["proprietary/system_ext/framework/qti-telephony-utils.jar"],
-	system_ext_specific: true,
-}
 
 dex_import {
 	name: "remotesimlockmanagerlibrary",
@@ -928,5 +915,24 @@ dex_import {
 	owner: "xiaomi",
 	jars: ["proprietary/system_ext/framework/wigig-service.jar"],
 	system_ext_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "libantradio",
+	owner: "xiaomi",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/lib/libantradio.so"],
+		},
+		android_arm64: {
+			srcs: ["proprietary/lib64/libantradio.so"],
+		},
+	},
+    check_elf_files: false,
+	compile_multilib: "both",
+	prefer: true,
 }
 

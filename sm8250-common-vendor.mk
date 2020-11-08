@@ -651,7 +651,6 @@ PRODUCT_PACKAGES += \
     qcrilhook \
     qmapbridge \
     qti-telephony-common \
-    qti-telephony-hidl-wrapper \
     qti-telephony-utils \
     remotesimlockmanagerlibrary \
     uimgbalibrary \
